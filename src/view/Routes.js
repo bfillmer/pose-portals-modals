@@ -19,10 +19,10 @@ const mapStateToProps = state => ({
 })
 
 const Container = ({route}) => {
-  const Current = routesMap[route]
+  const Route = routesMap[route]
   return (
-    <Current />
+    <Route />
   )
 }
 
-export const Route = connect(mapStateToProps)(Container)
+export const Routes = connect(mapStateToProps)(Container)

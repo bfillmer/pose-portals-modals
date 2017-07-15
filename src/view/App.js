@@ -2,11 +2,11 @@
 import React from 'react'
 
 import {Wrapper, Header} from 'view/Global'
-import {Route} from 'view/Route'
+import {Routes} from 'view/Routes'
 
 export const App = () => (
   <Wrapper>
     <Header />
-    <Route />
+    <Routes />
   </Wrapper>
 )
