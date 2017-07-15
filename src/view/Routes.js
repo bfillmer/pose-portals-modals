@@ -3,8 +3,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {NOT_FOUND} from 'redux-first-router'
 
-import {HOME, ABOUT} from 'types'
 import {routeType} from 'selectors'
+import {HOME, ABOUT} from 'types'
 import {About} from 'view/About'
 import {Home} from 'view/Home'
 

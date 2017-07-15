@@ -26,7 +26,7 @@ export function * routes () {
   }
   // Watch for future navigation events and run the correct saga if needed.
   while (true) {
-    const action = yield take(Object.keys(routesMap))
-    yield spawn(routesMap[action.type])
+    const {type} = yield take(Object.keys(routesMap))
+    yield spawn(routesMap[type])
   }
 }
