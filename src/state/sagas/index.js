@@ -1,16 +1,33 @@
 
-import {fork, take} from 'redux-saga/effects'
+import {fork, select, spawn, take} from 'redux-saga/effects'
 
 import {HOME} from 'types'
+import {routeType} from 'selectors'
 
-// @BUG @TODO You cannot take the first load action for the default page, unsure why.
+// Here we would do checks for existing data and load whatever we need for this
+// view. Also manage generic tasks such as showing/hiding loaders based on UI
+// needs.
 function * loadHome () {
-  const homeAction = yield take(HOME)
-  yield console.log('Loading Home Data', homeAction)
+  yield console.log('Loading Home Data')
 }
 
+const routesMap = {
+  [HOME]: loadHome
+}
+
+// On application boot we check state to see if we should load anything, then
+// we watch for future changes.
 function * routes () {
-  yield fork(loadHome)
+  const initialRoute = yield select(routeType)
+  // Run saga in route map that matches initialRoute if exists
+  if (routesMap[initialRoute]) {
+    yield spawn(routesMap[initialRoute])
+  }
+  // Watch for future navigation events and run the correct saga if needed.
+  while (true) {
+    const action = yield take(Object.keys(routesMap))
+    yield spawn(routesMap[action.type])
+  }
 }
 
 export function * sagas () {
