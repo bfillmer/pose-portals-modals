@@ -3,18 +3,16 @@ import {fork, take} from 'redux-saga/effects'
 
 import {HOME} from 'types'
 
+// @BUG @TODO You cannot take the first load action for the default page, unsure why.
 function * loadHome () {
-  yield console.log('loadHome Running')
-  yield take(HOME)
-  yield console.log('Loaded Home Data')
+  const homeAction = yield take(HOME)
+  yield console.log('Loading Home Data', homeAction)
 }
 
 function * routes () {
   yield fork(loadHome)
-  yield console.log('Routes Booted')
 }
 
 export function * sagas () {
   yield fork(routes)
-  yield console.log('Sagas Booted')
 }

@@ -1,42 +1,29 @@
 
 import React from 'react'
-import styled, {keyframes} from 'styled-components'
+import {connect} from 'react-redux'
 
-import logo from 'assets/logo.svg'
+import {HOME, ABOUT} from 'types'
+import {Wrapper, Header} from 'view/Global'
+import {About} from 'view/About'
+import {Home} from 'view/Home'
 
-const Wrapper = styled.div`
-  text-align: center;
-`
+const routesMap = {
+  [HOME]: Home,
+  [ABOUT]: About
+}
 
-const Header = styled.header`
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-`
+const mapStateToProps = state => ({
+  route: state.location.type
+})
 
-const logoSpin = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-`
+const Container = ({route}) => {
+  const Route = routesMap[route]
+  return (
+    <Wrapper>
+      <Header />
+      <Route />
+    </Wrapper>
+  )
+}
 
-const Logo = styled.img`
-  animation: ${logoSpin} infinite 20s linear;
-  height: 80px;
-`
-
-const Intro = styled.p`
-  font-size: large
-`
-
-export const App = () => (
-  <Wrapper>
-    <Header>
-      <Logo src={logo} alt='logo' />
-      <h2>Welcome to React</h2>
-    </Header>
-    <Intro>
-      To get started, edit <code>src/App.js</code> and save to reload.
-    </Intro>
-  </Wrapper>
-)
+export const App = connect(mapStateToProps)(Container)
