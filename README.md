@@ -10,3 +10,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * `standardjs` linting (https://standardjs.com/)
 * `styled-components` css-in-js (https://www.styled-components.com)
 * Commands include `NODE_PATH` to leverage absolute pathing to `src/` for cleaner imports.
+* `redux-first-router` (https://github.com/faceyspacey/redux-first-router)
+* `redux-saga` (https://redux-saga.js.org/)
+* `redux-actions` (https://github.com/acdlite/redux-actions)
