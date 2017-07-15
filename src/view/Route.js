@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {NOT_FOUND} from 'redux-first-router'
 
 import {HOME, ABOUT} from 'types'
+import {routeType} from 'selectors'
 import {About} from 'view/About'
 import {Home} from 'view/Home'
 
@@ -14,7 +15,7 @@ const routesMap = {
 }
 
 const mapStateToProps = state => ({
-  route: state.location.type
+  route: routeType(state)
 })
 
 const Container = ({route}) => {
