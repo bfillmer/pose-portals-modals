@@ -2,7 +2,7 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
-import logo from 'logo.svg'
+import logo from 'assets/logo.svg'
 
 const Wrapper = styled.div`
   text-align: center;
@@ -26,7 +26,7 @@ const Logo = styled.img`
 `
 
 const Intro = styled.p`
-  font-size: large;
+  font-size: large
 `
 
 export const App = () => (
