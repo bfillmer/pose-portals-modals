@@ -1,0 +1,3 @@
+{
+	"payload": "[{\"type\":\"route/HOME\",\"payload\":{},\"meta\":{\"location\":{\"current\":{\"pathname\":\"/\",\"type\":\"route/HOME\",\"payload\":{}},\"prev\":{\"pathname\":\"\",\"type\":\"\",\"payload\":{}},\"kind\":\"load\"}}},{\"type\":\"route/ABOUT\",\"payload\":{},\"meta\":{\"location\":{\"current\":{\"pathname\":\"/about\",\"type\":\"route/ABOUT\",\"payload\":{}},\"prev\":{\"pathname\":\"/\",\"type\":\"route/HOME\",\"payload\":{}},\"kind\":\"push\"}}}]"
+}
