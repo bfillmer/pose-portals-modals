@@ -22,3 +22,7 @@ Routes are state. In this implementation that state is stored in Redux and manag
 ## Notes on Tasks & Messages
 
 Generic tasks & messages reducers are useful in just about every application, thus the boilerplate here. Tasks are a generic holding spot for keeping track of things such as showing loaders during async calls and the like. Messaging is useful for errors or any other type of information to be displayed to the user.
+
+## Notes on Jest Snapshot Tests
+
+With a Redux-based store such as our UI is a function of our state, `f(S) = UI`. Because of this our snapshot tests state that at any given moment in time some UI visual we have determined to be *correct* the corresponding state should always render that UI. Thanks to the [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) extension for Chrome setting up tests in this manner simply becomes a matter of exporting the actions performed to arrive at that UI state, then rendering the top-level `<App />` component with that state.
