@@ -8,20 +8,10 @@ import {Provider} from 'react-redux'
 import {reducers} from 'state/reducers'
 import {App} from 'view/App'
 
-// Import our actions to get to the expected state for any given snapshot.
-import homeData from './Home.json'
-import aboutData from './About.json'
-
-// Map our test descriptions to the correct set of actions.
-const snapshotMap = {
-  'Home view loads and renders as expected': JSON.parse(homeData.payload),
-  'About view loads and renders as expected': JSON.parse(aboutData.payload)
-}
-
-// Iterate through our tests and run them.
-Object.keys(snapshotMap).map((description) => {
-  // Actions that ran to arrive at the state needed for our snapshot render.
-  const actionsArray = snapshotMap[description]
+// Run a snapshot test that renders the entire application with a given Redux store, parsing
+// actions exported using redux-dev-tools.
+export const createSnapshot = (description, payload) => {
+  const actionsArray = JSON.parse(payload)
   // Create a new store to avoid polluting the test.
   const store = createStore(reducers)
   // Replay the actions in order to end up with our needed state for our expected UI visual.
@@ -35,4 +25,4 @@ Object.keys(snapshotMap).map((description) => {
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
-})
+}

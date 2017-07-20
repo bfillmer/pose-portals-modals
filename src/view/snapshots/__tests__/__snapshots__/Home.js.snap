@@ -1,37 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`About view loads and renders as expected 1`] = `
-<div
-  className="sc-htpNat dEQUjC"
->
-  <header
-    className="sc-bwzfXH bsTHfU"
-  >
-    <img
-      alt="logo"
-      className="sc-bdVaJa cruMCr"
-      src="logo.svg"
-    />
-    <h2>
-      Welcome to React
-    </h2>
-  </header>
-  <p>
-    Head to the 
-    <a
-      href="/"
-      onClick={[Function]}
-      onMouseDown={false}
-      onTouchStart={false}
-      target={undefined}
-    >
-      Home Page
-    </a>
-    .
-  </p>
-</div>
-`;
-
 exports[`Home view loads and renders as expected 1`] = `
 <div
   className="sc-htpNat dEQUjC"
