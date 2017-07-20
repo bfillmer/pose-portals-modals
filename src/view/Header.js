@@ -4,11 +4,6 @@ import styled, {keyframes} from 'styled-components'
 
 import logo from 'assets/logo.svg'
 
-// GLOBAL WRAPPER
-export const Wrapper = styled.div`
-  text-align: center;
-`
-
 // HEADER COMPONENTS
 const logoSpin = keyframes`
   from { transform: rotate(0deg); }

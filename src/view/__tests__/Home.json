@@ -1,0 +1,3 @@
+{
+	"payload": "[{\"type\":\"route/HOME\",\"payload\":{},\"meta\":{\"location\":{\"current\":{\"pathname\":\"/\",\"type\":\"route/HOME\",\"payload\":{}},\"prev\":{\"pathname\":\"\",\"type\":\"\",\"payload\":{}},\"kind\":\"load\"}}}]"
+}

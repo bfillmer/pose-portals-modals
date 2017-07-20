@@ -11,8 +11,14 @@ const routesMap = {
 
 const history = createHistory()
 
-export const {
+const {
   reducer,
   middleware,
   enhancer
 } = connectRoutes(history, routesMap)
+
+export {
+  reducer,
+  middleware,
+  enhancer
+}
