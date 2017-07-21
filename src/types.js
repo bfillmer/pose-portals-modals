@@ -1,7 +1,7 @@
 
 // ROUTES
-export const HOME = 'route/HOME'
-export const ABOUT = 'route/ABOUT'
+export const ROUTE_HOME = 'route/ROUTE_HOME'
+export const ROUTE_ABOUT = 'route/ROUTE_ABOUT'
 
 // MESSAGES
 export const ADDED_MESSAGE = 'messages/ADDED_MESSAGE'

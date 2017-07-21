@@ -4,13 +4,13 @@ import {connect} from 'react-redux'
 import {NOT_FOUND} from 'redux-first-router'
 
 import {routeType} from 'selectors'
-import {HOME, ABOUT} from 'types'
+import {ROUTE_HOME, ROUTE_ABOUT} from 'types'
 import {About} from 'view/About'
 import {Home} from 'view/Home'
 
 const routesMap = {
-  [HOME]: Home,
-  [ABOUT]: About,
+  [ROUTE_HOME]: Home,
+  [ROUTE_ABOUT]: About,
   [NOT_FOUND]: Home
 }
 

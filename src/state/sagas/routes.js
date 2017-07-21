@@ -1,7 +1,7 @@
 
 import {select, spawn, take} from 'redux-saga/effects'
 
-import {HOME} from 'types'
+import {ROUTE_HOME} from 'types'
 import {routeType} from 'selectors'
 
 // Here we would do checks for existing data and load whatever we need for this
@@ -13,7 +13,7 @@ function * loadHome () {
 
 // Routes that require side effects on load are mapped here, type to saga.
 const routesMap = {
-  [HOME]: loadHome
+  [ROUTE_HOME]: loadHome
 }
 
 // On application boot we check state to see if we should load anything, then
