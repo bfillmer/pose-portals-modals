@@ -24,5 +24,15 @@
     "build": "NODE_PATH=src/ react-scripts build",
     "test": "NODE_PATH=src/ react-scripts test --env=jsdom",
     "lint": "standard --fix || true"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!node_modules/",
+      "!src/state/store.js",
+      "!src/state/sagas/*",
+      "!src/index.js",
+      "!src/registerServiceWorker.js"
+    ]
   }
 }

@@ -20,7 +20,7 @@ const Wrapper = styled.header`
   background-color: ${({theme}) => theme.grays.dark};
   height: 150px;
   padding: 20px;
-  color: white;
+  color: ${({theme}) => theme.white};
 `
 
 // HEADER COMPOSITION
