@@ -2,14 +2,14 @@
 
 exports[`About view loads and renders as expected 1`] = `
 <div
-  className="sc-htpNat dEQUjC"
+  className="sc-bxivhb EYjjH"
 >
   <header
-    className="sc-bwzfXH bsTHfU"
+    className="sc-htpNat fhVcZG"
   >
     <img
       alt="logo"
-      className="sc-bdVaJa cruMCr"
+      className="sc-bwzfXH ldyXqg"
       src="logo.svg"
     />
     <h2>

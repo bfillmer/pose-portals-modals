@@ -10,7 +10,7 @@ import {OVERLAY_LOADER} from 'types'
 // needs.
 export function * loadHome () {
   yield put(addTask(OVERLAY_LOADER))
-  yield delay(500)
+  yield delay(1000)
   yield console.log('Loading Home Data')
   yield put(removeTask(OVERLAY_LOADER))
 }

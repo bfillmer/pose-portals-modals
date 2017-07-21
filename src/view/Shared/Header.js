@@ -17,7 +17,7 @@ const Logo = styled.img`
 
 const Wrapper = styled.header`
   text-align: center;
-  background-color: #222;
+  background-color: ${({theme}) => theme.grays.dark};
   height: 150px;
   padding: 20px;
   color: white;
