@@ -4,12 +4,8 @@ import {select, spawn, take} from 'redux-saga/effects'
 import {ROUTE_HOME} from 'types'
 import {routeType} from 'selectors'
 
-// Here we would do checks for existing data and load whatever we need for this
-// view. Also manage generic tasks such as showing/hiding loaders based on UI
-// needs.
-function * loadHome () {
-  yield console.log('Loading Home Data')
-}
+// Route Sagas
+import {loadHome} from 'state/sagas/home'
 
 // Routes that require side effects on load are mapped here, type to saga.
 const routesMap = {

@@ -10,3 +10,6 @@ export const REMOVED_MESSAGE = 'messages/REMOVED_MESSAGE'
 // TASKS
 export const ADDED_TASK = 'tasks/ADDED_TASK'
 export const REMOVED_TASK = 'tasks/REMOVED_TASK'
+
+// OVERLAY_LOADER
+export const OVERLAY_LOADER = 'OVERLAY_LOADER'
