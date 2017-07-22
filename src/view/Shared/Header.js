@@ -15,18 +15,18 @@ const Logo = styled.img`
   height: 80px;
 `
 
-const HeaderContainer = styled.header`
+const Wrapper = styled.header`
   text-align: center;
-  background-color: #222;
+  background-color: ${({theme}) => theme.grays.dark};
   height: 150px;
   padding: 20px;
-  color: white;
+  color: ${({theme}) => theme.white};
 `
 
 // HEADER COMPOSITION
 export const Header = () => (
-  <HeaderContainer>
+  <Wrapper>
     <Logo src={logo} alt='logo' />
     <h2>Welcome to React</h2>
-  </HeaderContainer>
+  </Wrapper>
 )

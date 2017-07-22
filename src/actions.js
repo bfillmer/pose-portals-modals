@@ -4,12 +4,14 @@ import {createAction} from 'redux-actions'
 import * as types from 'types'
 
 // ROUTING
-export const routeHome = createAction(types.HOME)
-export const routeAbout = createAction(types.ABOUT)
+export const routeHome = createAction(types.ROUTE_HOME)
+export const routeAbout = createAction(types.ROUTE_ABOUT)
 
 // MESSAGES
-const addMessagePayload = (id, type, view, payload) => ({id, type, view, payload})
-export const addMessage = createAction(types.ADDED_MESSAGE, addMessagePayload)
+export const addMessage = createAction(
+  types.ADDED_MESSAGE,
+  (id, type, view, payload) => ({id, type, view, payload})
+)
 export const removeMessage = createAction(types.REMOVED_MESSAGE)
 
 // TASKS
