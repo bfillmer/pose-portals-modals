@@ -14,6 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * `redux-first-router` (https://github.com/faceyspacey/redux-first-router)
 * `redux-saga` (https://redux-saga.js.org/)
 * `redux-actions` (https://github.com/acdlite/redux-actions)
+* Streamlined snapshot testing leveraging actions exported from Redux DevTools.
 
 ## Notes on Routing
 
