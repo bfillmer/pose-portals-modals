@@ -3,7 +3,7 @@
 import {addInteraction, removeInteraction} from 'actions'
 import {interactionsReducer} from 'state/reducers/interactions'
 
-describe('interactionsReducer handles actions correctly', () => {
+describe('[UNIT] interactionsReducer handles actions correctly', () => {
   test('ADDED_INTERACTION', () => {
     const initialState = []
     const interaction = 'ADD_INTERACTION'

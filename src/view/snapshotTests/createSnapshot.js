@@ -17,7 +17,7 @@ export const createSnapshot = (description, payload) => {
   // Replay the actions in order to end up with our needed state for our expected UI visual.
   actionsArray.map(store.dispatch)
   // Perform a full tree render test for this snapshot.
-  test(description, () => {
+  test(`[SNAP] ${description}`, () => {
     const tree = renderer.create(
       <Provider store={store}>
         <App />

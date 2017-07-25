@@ -17,3 +17,6 @@ export const removeMessage = createAction(types.REMOVED_MESSAGE)
 // INTERACTIONS
 export const addInteraction = createAction(types.ADDED_INTERACTION)
 export const removeInteraction = createAction(types.REMOVED_INTERACTION)
+
+// PROFILE
+export const updateName = createAction(types.UPDATED_NAME)
