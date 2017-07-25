@@ -14,6 +14,6 @@ export const addMessage = createAction(
 )
 export const removeMessage = createAction(types.REMOVED_MESSAGE)
 
-// TASKS
-export const addTask = createAction(types.ADDED_TASK)
-export const removeTask = createAction(types.REMOVED_TASK)
+// INTERACTIONS
+export const addInteraction = createAction(types.ADDED_INTERACTION)
+export const removeInteraction = createAction(types.REMOVED_INTERACTION)

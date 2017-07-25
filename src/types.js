@@ -7,9 +7,9 @@ export const ROUTE_ABOUT = 'route/ROUTE_ABOUT'
 export const ADDED_MESSAGE = 'messages/ADDED_MESSAGE'
 export const REMOVED_MESSAGE = 'messages/REMOVED_MESSAGE'
 
-// TASKS
-export const ADDED_TASK = 'tasks/ADDED_TASK'
-export const REMOVED_TASK = 'tasks/REMOVED_TASK'
+// INTERACTIONS
+export const ADDED_INTERACTION = 'tasks/ADDED_INTERACTION'
+export const REMOVED_INTERACTION = 'tasks/REMOVED_INTERACTION'
 
 // OVERLAY_LOADER
 export const OVERLAY_LOADER = 'OVERLAY_LOADER'
