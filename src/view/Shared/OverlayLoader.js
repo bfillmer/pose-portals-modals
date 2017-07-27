@@ -15,14 +15,8 @@ const Scrim = styled.div`
   background-color: ${({theme}) => theme.grays.dark};
 `
 
-const H1 = styled.h1`
-  color: ${({theme}) => theme.white};
-`
-
 const Overlay = () => (
-  <Scrim>
-    <H1>Loading</H1>
-  </Scrim>
+  <Scrim />
 )
 
 const mapStateToProps = state => ({

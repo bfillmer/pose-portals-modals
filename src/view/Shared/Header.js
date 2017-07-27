@@ -3,6 +3,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import styled, {keyframes} from 'styled-components'
 
+import {getTheme} from 'view/theme'
+
 import logo from 'assets/logo.svg'
 
 // HEADER COMPONENTS
@@ -18,10 +20,10 @@ const Logo = styled.img`
 
 const Wrapper = styled.header`
   text-align: center;
-  background-color: ${({theme}) => theme.grays.dark};
+  background-color: ${getTheme('grays', 'dark')};
   height: 150px;
   padding: 20px;
-  color: ${({theme}) => theme.white};
+  color: ${getTheme('white')};
 `
 
 const mapStateToProps = state => ({
