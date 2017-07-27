@@ -20,9 +20,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Routes are state. In this implementation that state is stored in Redux and managed primarily by `redux-first-router`. There are three mappings of route state, the impelmentation of actual browser url to type (`state/routes`), the mapping of types to UI components (`view/Routes`), and the mapping of types to sagas for side-effects (`state/sagas/routes`).
 
-## Notes on Tasks & Messages
+## Notes on Interactions & Messages
 
-Generic tasks & messages reducers are useful in just about every application, thus the boilerplate here. Tasks are a generic holding spot for keeping track of things such as showing loaders during async calls and the like. Messaging is useful for errors or any other type of information to be displayed to the user.
+Generic UI interactions & messages reducers are useful in just about every application, thus the boilerplate here. Interactions are a generic holding spot for keeping track of things such as showing loaders during async calls and the like. Messaging is useful for errors or any other type of information to be displayed to the user.
 
 ## Notes on Jest Snapshot Tests
 

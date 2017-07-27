@@ -1,5 +1,6 @@
 
 import React from 'react'
+import {connect} from 'react-redux'
 import styled, {keyframes} from 'styled-components'
 
 import logo from 'assets/logo.svg'
@@ -23,10 +24,16 @@ const Wrapper = styled.header`
   color: ${({theme}) => theme.white};
 `
 
+const mapStateToProps = state => ({
+  name: state.profile.name
+})
+
 // HEADER COMPOSITION
-export const Header = () => (
+const Container = ({name}) => (
   <Wrapper>
     <Logo src={logo} alt='logo' />
-    <h2>Welcome to React</h2>
+    <h2>Welcome to {name}</h2>
   </Wrapper>
 )
+
+export const Header = connect(mapStateToProps)(Container)

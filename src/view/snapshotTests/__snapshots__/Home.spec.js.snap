@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home view displays overlay loader as expected 1`] = `
+exports[`[SNAP] Home view displays overlay loader as expected 1`] = `
 <div
   className="sc-bxivhb EYjjH"
 >
@@ -16,7 +16,8 @@ exports[`Home view displays overlay loader as expected 1`] = `
       src="logo.svg"
     />
     <h2>
-      Welcome to React
+      Welcome to 
+      
     </h2>
   </header>
   <p>
@@ -35,7 +36,7 @@ exports[`Home view displays overlay loader as expected 1`] = `
 </div>
 `;
 
-exports[`Home view loads and renders as expected 1`] = `
+exports[`[SNAP] Home view loads and renders as expected 1`] = `
 <div
   className="sc-bxivhb EYjjH"
 >
@@ -48,7 +49,8 @@ exports[`Home view loads and renders as expected 1`] = `
       src="logo.svg"
     />
     <h2>
-      Welcome to React
+      Welcome to 
+      React
     </h2>
   </header>
   <p>

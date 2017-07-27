@@ -3,7 +3,7 @@
 import {addMessage, removeMessage} from 'actions'
 import {message as messageDefaults, messagesReducer} from 'state/reducers/messages'
 
-test('message function returns expected defaults', () => {
+test('[UNIT] message function returns expected defaults', () => {
   const id = 'an-id'
   const expected = {
     id,

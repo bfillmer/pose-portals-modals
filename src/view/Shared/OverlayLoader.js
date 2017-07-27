@@ -16,7 +16,7 @@ const Overlay = styled.div`
 `
 
 const mapStateToProps = state => ({
-  show: state.tasks.includes(OVERLAY_LOADER)
+  show: state.interactions.includes(OVERLAY_LOADER)
 })
 
 const Loader = ({show}) => show ? <Overlay /> : null
