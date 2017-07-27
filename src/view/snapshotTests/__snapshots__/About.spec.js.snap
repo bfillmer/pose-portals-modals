@@ -2,14 +2,14 @@
 
 exports[`[SNAP] About view loads and renders as expected 1`] = `
 <div
-  className="sc-bxivhb EYjjH"
+  className="sc-ifAKCX fVKAHz"
 >
   <header
-    className="sc-htpNat evPKAK"
+    className="sc-bxivhb eNGRYy"
   >
     <img
       alt="logo"
-      className="sc-bwzfXH ldyXqg"
+      className="sc-htpNat lkfFGP"
       src="logo.svg"
     />
     <h2>
