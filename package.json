@@ -24,7 +24,8 @@
     "start": "NODE_PATH=src/ react-scripts start",
     "build": "NODE_PATH=src/ react-scripts build",
     "test": "NODE_PATH=src/ react-scripts test --env=jsdom",
-    "lint": "standard --fix || true"
+    "lint": "standard --fix || true",
+    "coverage": "yarn test -- --coverage"
   },
   "jest": {
     "collectCoverageFrom": [
