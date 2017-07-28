@@ -19,7 +19,7 @@ const mapStateToProps = state => ({
 })
 
 const Container = ({route}) => {
-  const Route = routesMap[route]
+  const Route = routesMap[route] ? routesMap[route] : routesMap[NOT_FOUND]
   return (
     <Route />
   )
