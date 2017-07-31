@@ -1,21 +1,9 @@
 /* global describe, expect, test */
 
 import {addMessage, removeMessage} from 'actions'
-import {message as messageDefaults, messagesReducer} from 'state/reducers/messages'
+import {messagesReducer} from 'state/reducers/messages'
 
-test('[UNIT] message function returns expected defaults', () => {
-  const id = 'an-id'
-  const expected = {
-    id,
-    type: 'MESSAGE',
-    view: 'TOAST',
-    payload: ''
-  }
-  const actual = messageDefaults({id})
-  expect(actual).toEqual(expected)
-})
-
-describe('messagesReducer handles actions correctly', () => {
+describe('[UNIT] messagesReducer handles actions correctly', () => {
   test('ADDED_MESSAGE', () => {
     const initialState = []
     const [id, type, view] = ['error-1', 'ERROR', 'MODAL']

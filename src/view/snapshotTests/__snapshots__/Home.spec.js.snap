@@ -17,7 +17,6 @@ exports[`[SNAP] Home view displays overlay loader as expected 1`] = `
     />
     <h2>
       Welcome to 
-      
     </h2>
   </header>
   <p>
