@@ -15,4 +15,4 @@ export const REMOVED_INTERACTION = 'tasks/REMOVED_INTERACTION'
 export const OVERLAY_LOADER = 'OVERLAY_LOADER'
 
 // PROFILE
-export const UPDATED_NAME = 'UPDATED_NAME'
+export const UPDATED_NAME = 'profile/UPDATED_NAME'
