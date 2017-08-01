@@ -1,7 +1,7 @@
 
 # Playground
 
-General React playground for experimenting with new things. Running build available at https://playground-hfvzslencp.now.sh.
+General React playground for experimenting with new things.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
