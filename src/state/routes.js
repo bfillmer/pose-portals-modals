@@ -1,5 +1,5 @@
 
-import { connectRoutes } from 'redux-first-router'
+import {connectRoutes} from 'redux-first-router'
 import createHistory from 'history/createBrowserHistory'
 
 import {ROUTE_HOME, ROUTE_ABOUT} from 'types'

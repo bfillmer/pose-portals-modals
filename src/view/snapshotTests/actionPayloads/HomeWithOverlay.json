@@ -1,3 +1,0 @@
-{
-	"payload": "[{\"type\":\"route/ROUTE_HOME\",\"payload\":{},\"meta\":{\"location\":{\"current\":{\"pathname\":\"/\",\"type\":\"route/ROUTE_HOME\",\"payload\":{}},\"prev\":{\"pathname\":\"\",\"type\":\"\",\"payload\":{}},\"kind\":\"load\"}}},{\"type\":\"tasks/ADDED_INTERACTION\",\"payload\":\"OVERLAY_LOADER\"}]"
-}

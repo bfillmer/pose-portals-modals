@@ -2,17 +2,3 @@
 // ROUTES
 export const ROUTE_HOME = 'route/ROUTE_HOME'
 export const ROUTE_ABOUT = 'route/ROUTE_ABOUT'
-
-// MESSAGES
-export const ADDED_MESSAGE = 'messages/ADDED_MESSAGE'
-export const REMOVED_MESSAGE = 'messages/REMOVED_MESSAGE'
-
-// INTERACTIONS
-export const ADDED_INTERACTION = 'tasks/ADDED_INTERACTION'
-export const REMOVED_INTERACTION = 'tasks/REMOVED_INTERACTION'
-
-// OVERLAY_LOADER
-export const OVERLAY_LOADER = 'OVERLAY_LOADER'
-
-// PROFILE
-export const UPDATED_NAME = 'profile/UPDATED_NAME'

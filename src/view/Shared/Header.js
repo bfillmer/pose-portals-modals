@@ -1,6 +1,5 @@
 
 import React from 'react'
-import {connect} from 'react-redux'
 import styled, {keyframes} from 'styled-components'
 
 import {getTheme} from 'view/theme'
@@ -26,16 +25,10 @@ const Wrapper = styled.header`
   color: ${getTheme('white')};
 `
 
-const mapStateToProps = state => ({
-  name: state.profile.name
-})
-
 // HEADER COMPOSITION
-const Container = ({name}) => (
+export const Header = ({name}) => (
   <Wrapper>
     <Logo src={logo} alt='logo' />
-    <h2>Welcome to {name}</h2>
+    <h2>Welcome to React</h2>
   </Wrapper>
 )
-
-export const Header = connect(mapStateToProps)(Container)
