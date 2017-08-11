@@ -7,7 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Overview
 
-* Generally the playground contains the latest and greatest variation in how I think of structuring a React application.
 * Commands include `NODE_PATH` to leverage absolute pathing to `src/` for cleaner imports.
 * `standardjs` linting (https://standardjs.com/)
 * `styled-components` css-in-js (https://www.styled-components.com)

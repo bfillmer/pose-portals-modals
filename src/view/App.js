@@ -9,7 +9,7 @@ import {theme} from 'view/theme'
 
 // GLOBAL WRAPPER
 const Wrapper = styled.div`
-  text-align: center;
+  height: 100vh;
 `
 
 export const App = () => (

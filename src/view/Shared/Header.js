@@ -2,8 +2,6 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
-import {getTheme} from 'view/theme'
-
 import logo from 'assets/logo.svg'
 
 // HEADER COMPONENTS
@@ -19,16 +17,13 @@ const Logo = styled.img`
 
 const Wrapper = styled.header`
   text-align: center;
-  background-color: ${getTheme('grays', 'dark')};
-  height: 150px;
-  padding: 20px;
-  color: ${getTheme('white')};
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 `
 
 // HEADER COMPOSITION
 export const Header = ({name}) => (
   <Wrapper>
     <Logo src={logo} alt='logo' />
-    <h2>Welcome to React</h2>
   </Wrapper>
 )

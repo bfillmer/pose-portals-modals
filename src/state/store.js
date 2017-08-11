@@ -3,7 +3,11 @@ import {applyMiddleware, compose, createStore} from 'redux'
 import createSagaMiddleware from 'redux-saga'
 
 import {sagas} from 'state/sagas'
-import {middleware as routesMiddleware, enhancer as routesEnhancer} from 'state/routes'
+import {
+  middleware as routesMiddleware,
+  enhancer as routesEnhancer,
+  initialDispatch
+} from 'state/routes'
 import {reducers} from 'state/reducers'
 
 const sagasMiddleware = createSagaMiddleware()
@@ -19,3 +23,4 @@ export const store = createStore(
 )
 
 sagasMiddleware.run(sagas)
+initialDispatch()
