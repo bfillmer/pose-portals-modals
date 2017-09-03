@@ -1,6 +1,7 @@
 
 import {applyMiddleware, compose, createStore} from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import {composeWithDevTools} from 'redux-devtools-extension'
 
 import {sagas} from 'state/sagas'
 import {
@@ -14,8 +15,11 @@ const sagasMiddleware = createSagaMiddleware()
 
 const composeMiddlewares = applyMiddleware(routesMiddleware, sagasMiddleware)
 
-// Use Redux DevTools Extension if available and not in production.
-const composeEnhancers = ((process.env.NODE_ENV !== 'production') && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose
+// Use Redux DevTools Extension in development.
+const composeEnhancers = (enhancer, middlewares) =>
+  typeof window !== 'undefined'
+    ? composeWithDevTools(middlewares, enhancer)
+    : compose(enhancer, middlewares)
 
 export const store = createStore(
   reducers,
