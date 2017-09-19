@@ -1,7 +1,8 @@
 
-import {spawn, takeEvery} from 'redux-saga/effects'
+import {select, spawn, takeEvery} from 'redux-saga/effects'
 
 import {ROUTE_HOME} from 'types'
+import {routeType} from 'selectors'
 
 // Route Sagas
 import {loadHome} from 'state/sagas/home'
@@ -18,5 +19,9 @@ function * handleRouteChange ({type}) {
 
 // Watch for all actions dispatched that have an action type in our routesMap.
 export function * routes () {
+  const initialRoute = yield select(routeType)
+  if (routesMap[initialRoute]) {
+    yield spawn(routesMap[initialRoute])
+  }
   yield takeEvery(Object.keys(routesMap), handleRouteChange)
 }

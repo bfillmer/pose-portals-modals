@@ -6,8 +6,7 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import {sagas} from 'state/sagas'
 import {
   middleware as routesMiddleware,
-  enhancer as routesEnhancer,
-  initialDispatch
+  enhancer as routesEnhancer
 } from 'state/routes'
 import {reducers} from 'state/reducers'
 
@@ -27,4 +26,3 @@ export const store = createStore(
 )
 
 sagasMiddleware.run(sagas)
-initialDispatch()

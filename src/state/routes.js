@@ -14,8 +14,7 @@ const history = createHistory()
 const {
   reducer,
   middleware,
-  enhancer,
-  initialDispatch
+  enhancer
 } = connectRoutes(history, routesMap)
 
 // @HACK Exporting when assigning the variables above works when the application compiles to run,
@@ -23,6 +22,5 @@ const {
 export {
   reducer,
   middleware,
-  enhancer,
-  initialDispatch
+  enhancer
 }
