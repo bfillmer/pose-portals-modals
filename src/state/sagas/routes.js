@@ -1,5 +1,5 @@
 
-import {select, spawn, takeEvery} from 'redux-saga/effects'
+import {select, spawn, takeLatest} from 'redux-saga/effects'
 
 import {ROUTE_HOME} from 'types'
 import {routeType} from 'selectors'
@@ -23,5 +23,5 @@ export function * routes () {
   if (routesMap[initialRoute]) {
     yield spawn(routesMap[initialRoute])
   }
-  yield takeEvery(Object.keys(routesMap), handleRouteChange)
+  yield takeLatest(Object.keys(routesMap), handleRouteChange)
 }

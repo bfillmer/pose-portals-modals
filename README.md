@@ -1,7 +1,7 @@
 
-# Playground
+# Greenfield
 
-General React playground for experimenting with new things.
+Opinionated application organization and libraries for bootstrapping new React-based applications.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -13,6 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * `redux-first-router` (https://github.com/faceyspacey/redux-first-router)
 * `redux-saga` (https://redux-saga.js.org/)
 * `redux-actions` (https://github.com/acdlite/redux-actions)
+* `redux-data-structures` (https://redux-data-structures.js.org/)
 
 ## Notes on Routing
 
