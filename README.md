@@ -5,15 +5,26 @@ Opinionated application organization and libraries for bootstrapping new React-b
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+## Commands
+
+```bash
+yarn start # development server
+yarn build # production build
+yarn test # Jest in watch-mode
+yarn coverage # Jest coverage report
+yarn lint # fix basic linting errors
+```
+
 ## Overview
 
 * Commands include `NODE_PATH` to leverage absolute pathing to `src/` for cleaner imports.
 * `standardjs` linting (https://standardjs.com/)
 * `styled-components` css-in-js (https://www.styled-components.com)
-* `redux-first-router` (https://github.com/faceyspacey/redux-first-router)
-* `redux-saga` (https://redux-saga.js.org/)
-* `redux-actions` (https://github.com/acdlite/redux-actions)
-* `redux-data-structures` (https://redux-data-structures.js.org/)
+* `redux-first-router` routing as state (https://github.com/faceyspacey/redux-first-router)
+* `redux-saga` side-effects (https://redux-saga.js.org/)
+* `redux-actions` simplify actions boilerplate (https://github.com/acdlite/redux-actions)
+* `redux-data-structures` simplify reducer boilerplate (https://redux-data-structures.js.org/)
+* `axios` just-works http client (https://github.com/axios/axios)
 
 ## Notes on Routing
 
