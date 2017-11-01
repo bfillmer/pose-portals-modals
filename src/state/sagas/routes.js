@@ -1,5 +1,5 @@
 
-import {select, spawn, takeLatest} from 'redux-saga/effects'
+import {call, cancel, fork, select, take, takeLatest} from 'redux-saga/effects'
 
 import {ROUTE_HOME} from 'types'
 import {routeType} from 'selectors'
@@ -14,14 +14,19 @@ const routesMap = {
 
 // Spawn the saga associated with the route type.
 function * handleRouteChange ({type}) {
-  yield spawn(routesMap[type])
+  yield call(routesMap[type])
 }
 
 // Watch for all actions dispatched that have an action type in our routesMap.
 export function * routes () {
+  const ROUTE_TYPES = Object.keys(routesMap)
+  yield takeLatest(ROUTE_TYPES, handleRouteChange)
+  // On initial load of the application we check our state for a route and run the necessary saga
+  // if needed.
   const initialRoute = yield select(routeType)
   if (routesMap[initialRoute]) {
-    yield spawn(routesMap[initialRoute])
+    const initialFork = yield fork(routesMap[initialRoute])
+    yield take(ROUTE_TYPES)
+    yield cancel(initialFork)
   }
-  yield takeLatest(Object.keys(routesMap), handleRouteChange)
 }
