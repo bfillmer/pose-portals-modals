@@ -5,6 +5,7 @@ import {NOT_FOUND} from 'redux-first-router'
 
 import {routeType} from 'selectors'
 import {ROUTE_HOME, ROUTE_ABOUT} from 'types'
+
 import {About} from 'view/About'
 import {Home} from 'view/Home'
 

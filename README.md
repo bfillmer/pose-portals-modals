@@ -25,7 +25,3 @@ yarn lint # fix basic linting errors
 * `redux-actions` simplify actions boilerplate (https://github.com/acdlite/redux-actions)
 * `redux-data-structures` simplify reducer boilerplate (https://redux-data-structures.js.org/)
 * `axios` just-works http client (https://github.com/axios/axios)
-
-## Notes on Routing
-
-Routes are state. In this implementation that state is stored in Redux and managed primarily by `redux-first-router`. There are three mappings of route state, the impelmentation of actual browser url to type (`state/routes`), the mapping of types to UI components (`view/Routes`), and the mapping of types to sagas for side-effects (`state/sagas/routes`).

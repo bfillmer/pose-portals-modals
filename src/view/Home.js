@@ -4,7 +4,7 @@ import Link from 'redux-first-router-link'
 
 import {routeAbout} from 'actions'
 
-import {Section} from 'view/Shared/Section'
+import {Section} from 'view/Shared/Structural'
 import {H1, P} from 'view/Shared/Typography'
 
 export const Home = () => (

@@ -9,18 +9,12 @@ const routesMap = {
   [ROUTE_ABOUT]: '/about'
 }
 
+export const ROUTE_TYPES = Object.keys(routesMap)
+
 const history = createHistory()
 
-const {
+export const {
   reducer,
   middleware,
   enhancer
 } = connectRoutes(history, routesMap)
-
-// @HACK Exporting when assigning the variables above works when the application compiles to run,
-// however Jest chokes on the reducer when running our snapshot tests.
-export {
-  reducer,
-  middleware,
-  enhancer
-}
