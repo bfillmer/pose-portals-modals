@@ -21,7 +21,7 @@ function * handleRouteChange ({type}) {
   yield call(routesMap[type])
 }
 
-// Watch for all actions dispatched that have an action type in our routesMap.
+// Watch for all actions dispatched that have an action type in our saga routesMap.
 export function * routes () {
   yield takeLatest(SAGA_ROUTE_TYPES, handleRouteChange)
   // On initial load of the application we check our state for a route and run the necessary saga
