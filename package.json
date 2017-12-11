@@ -5,8 +5,8 @@
   "dependencies": {
     "axios": "0.17.1",
     "history": "4.7.2",
-    "react": "16.1.0",
-    "react-dom": "16.1.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
@@ -14,7 +14,7 @@
     "redux-first-router": "1.9.19",
     "redux-first-router-link": "1.4.2",
     "redux-saga": "0.16.0",
-    "styled-components": "2.2.3"
+    "styled-components": "2.2.4"
   },
   "devDependencies": {
     "react-scripts": "1.0.17",
