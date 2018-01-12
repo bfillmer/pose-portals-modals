@@ -5,8 +5,8 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import {syncResponses} from '@curi/redux'
 
 import {sagas} from 'state/sagas'
-import {router} from 'state/routes'
 import {reducers} from 'state/reducers'
+import {router} from 'router'
 
 const sagasMiddleware = createSagaMiddleware()
 

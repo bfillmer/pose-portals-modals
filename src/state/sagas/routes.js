@@ -2,9 +2,8 @@
 import {eventChannel} from 'redux-saga'
 import {call, take} from 'redux-saga/effects'
 
-import {router} from 'state/routes'
+import {router} from 'router'
 import {ROUTE_HOME} from 'types'
-// import {routeType} from 'selectors'
 
 // Route Sagas
 import {loadHome} from 'state/sagas/home'
@@ -14,18 +13,16 @@ const routesMap = {
   [ROUTE_HOME]: loadHome
 }
 
-// const SAGA_ROUTE_TYPES = Object.keys(routesMap)
-
-const watchRouting = () => eventChannel(emitter => {
+const makeRoutesChannel = () => eventChannel(emitter => {
   router.respond((response) => emitter({response}))
   return () => null
 })
 
 // Watch for all actions dispatched that have an action type in our saga routesMap.
 export function * routes () {
-  const channel = yield call(watchRouting)
+  const routeChannel = yield call(makeRoutesChannel)
   while (true) {
-    const {response} = yield take(channel)
+    const {response} = yield take(routeChannel)
     if (response.name && routesMap[response.name]) {
       yield call(routesMap[response.name])
     }
