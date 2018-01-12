@@ -8,6 +8,6 @@ import {Link} from 'view/Shared/Link'
 export const Home = () => (
   <Section>
     <H1>Home</H1>
-    <P>Head to the <Link href='/about'>About Page</Link>.</P>
+    <P>Head to the <Link href='/about/one'>About Page</Link>.</P>
   </Section>
 )

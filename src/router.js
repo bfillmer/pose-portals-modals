@@ -9,7 +9,7 @@ export const history = Browser()
 const routes = [
   {
     name: ROUTE_ABOUT,
-    path: 'about'
+    path: 'about/:step?'
   },
   {
     name: ROUTE_HOME,

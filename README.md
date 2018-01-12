@@ -20,7 +20,7 @@ yarn lint # fix basic linting errors
 * Commands include `NODE_PATH` to leverage absolute pathing to `src/` for cleaner imports.
 * `standardjs` linting (https://standardjs.com/)
 * `styled-components` css-in-js (https://www.styled-components.com)
-* `redux-first-router` routing as state (https://github.com/faceyspacey/redux-first-router)
+* `curi` routing (https://curi.js.org/)
 * `redux-saga` side-effects (https://redux-saga.js.org/)
 * `redux-actions` simplify actions boilerplate (https://github.com/acdlite/redux-actions)
 * `redux-data-structures` simplify reducer boilerplate (https://redux-data-structures.js.org/)
