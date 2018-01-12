@@ -24,6 +24,9 @@ const mapStateToProps = state => ({
   step: aboutStep(state)
 })
 
+// In the event that a large amount of this About component didn't need to be re-rendered we could
+// instead have the <Step /> component be connected to the store and re-render it's contents based
+// on step changes.
 const Container = ({step}) => {
   const Step = step && mapStepsToParams[step] ? mapStepsToParams[step] : StepOne
   return (
