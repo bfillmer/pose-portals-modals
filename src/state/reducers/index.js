@@ -1,7 +1,6 @@
 
 import {combineReducers} from 'redux'
-
-import {reducer as location} from 'state/routes'
+import {curiReducer as location} from '@curi/redux'
 
 export const reducers = combineReducers({
   location

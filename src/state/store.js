@@ -2,27 +2,27 @@
 import {applyMiddleware, compose, createStore} from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import {composeWithDevTools} from 'redux-devtools-extension'
+import {syncResponses} from '@curi/redux'
 
 import {sagas} from 'state/sagas'
-import {
-  middleware as routesMiddleware,
-  enhancer as routesEnhancer
-} from 'state/routes'
+import {router} from 'state/routes'
 import {reducers} from 'state/reducers'
 
 const sagasMiddleware = createSagaMiddleware()
 
-const composeMiddlewares = applyMiddleware(routesMiddleware, sagasMiddleware)
+const composeMiddlewares = applyMiddleware(sagasMiddleware)
 
 // Use Redux DevTools Extension in development.
-const composeEnhancers = (enhancer, middlewares) =>
+const composeEnhancers = (middlewares) =>
   typeof window !== 'undefined'
-    ? composeWithDevTools(middlewares, enhancer)
-    : compose(enhancer, middlewares)
+    ? composeWithDevTools(middlewares)
+    : compose(middlewares)
 
 export const store = createStore(
   reducers,
-  composeEnhancers(routesEnhancer, composeMiddlewares)
+  composeEnhancers(composeMiddlewares)
 )
 
+// Boot up saga middleware and our routing.
 sagasMiddleware.run(sagas)
+syncResponses(store, router)
