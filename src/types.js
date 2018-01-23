@@ -1,4 +1,4 @@
 
-// ROUTES
-export const ROUTE_HOME = 'route/ROUTE_HOME'
-export const ROUTE_ABOUT = 'route/ROUTE_ABOUT'
+// Routes
+export const ROUTE_HOME = 'route/HOME'
+export const ROUTE_ABOUT = 'route/ABOUT'

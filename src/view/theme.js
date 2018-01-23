@@ -1,15 +1,23 @@
 
 import {injectGlobal} from 'styled-components'
 
-// Reusable definitions for colors, spacings, etc.
-export const theme = {
+const colors = {
   white: '#f4f4f4',
   grays: {
     light: '#eee',
     medium: '#999',
     dark: '#333'
-  },
-  bottomMargin: '1.5rem'
+  }
+}
+
+const margins = {
+  base: '1.5rem'
+}
+
+// Reusable definitions for colors, spacings, etc.
+export const theme = {
+  colors,
+  margins
 }
 
 // Inject some global styles that are most likely to be coupled to theme variables.
@@ -18,7 +26,7 @@ injectGlobal`
     font-size: 16px;
     font-weight: normal;
     font-family: sans-serif;
-    background-color: #fff;
+    background-color: ${colors.white};
   }
 `
 
