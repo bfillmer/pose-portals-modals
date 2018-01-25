@@ -9,6 +9,6 @@ const makeLinkAction = href => e => {
   history.navigate(href)
 }
 
-export const Link = ({href, children}) => (
-  <a href={href} onClick={makeLinkAction(href)}>{children}</a>
+export const Link = ({href, children, ...additionalProps}) => (
+  <a href={href} onClick={makeLinkAction(href)} {...additionalProps}>{children}</a>
 )
