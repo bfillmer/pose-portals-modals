@@ -19,14 +19,16 @@
   "devDependencies": {
     "react-scripts": "1.1.0",
     "redux-devtools-extension": "^2.13.2",
+    "serve": "^6.4.9",
     "standard": "^10.0.3"
   },
   "scripts": {
     "start": "NODE_PATH=src/ react-scripts start",
+    "now-start": "serve -s ./build",
     "build": "NODE_PATH=src/ react-scripts build",
     "test": "NODE_PATH=src/ react-scripts test --env=jsdom",
     "coverage": "yarn test -- --coverage",
-    "lint": "standard --fix || true"
+    "lint": "standard --fix"
   },
   "jest": {
     "collectCoverageFrom": [
