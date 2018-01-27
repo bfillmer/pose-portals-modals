@@ -1,6 +1,6 @@
 
 import {LOCATION_CHANGE} from '@curi/redux'
-import {call, takeEvery} from 'redux-saga/effects'
+import {cancel, fork, take, takeEvery} from 'redux-saga/effects'
 
 import {ROUTE_HOME} from 'types'
 
@@ -12,11 +12,13 @@ const routesMap = {
   [ROUTE_HOME]: initHome
 }
 
-// Given our route maps to one we want to run a saga for we do so.
-// @TODO Fork and cancel on change.
+// Run the saga for a given route if one exists, then watch for the next location change
+// and cancel the previously running saga.
 function * handleLocationChange ({response}) {
   if (response.name && routesMap[response.name]) {
-    yield call(routesMap[response.name])
+    const routeSaga = yield fork(routesMap[response.name])
+    yield take(LOCATION_CHANGE)
+    yield cancel(routeSaga)
   }
 }
 
