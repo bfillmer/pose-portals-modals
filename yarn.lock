@@ -2,7 +2,14 @@
 # yarn lockfile v1
 
 
-"@curi/core@^1.0.0-beta.23", "@curi/core@^1.0.0-beta.24":
+"@curi/core@1.0.0-beta.25":
+  version "1.0.0-beta.25"
+  resolved "https://registry.yarnpkg.com/@curi/core/-/core-1.0.0-beta.25.tgz#85afd13e61218f4160687bad40f19eecf6406206"
+  dependencies:
+    "@hickory/root" "^1.0.0-beta.6"
+    path-to-regexp "^2.1.0"
+
+"@curi/core@^1.0.0-beta.24":
   version "1.0.0-beta.24"
   resolved "https://registry.yarnpkg.com/@curi/core/-/core-1.0.0-beta.24.tgz#896811859523ee83e3bb7ad6bb87059ef33e87e7"
   dependencies:
@@ -6649,9 +6656,9 @@ style-loader@0.19.0:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
-styled-components@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.0.2.tgz#dbcd66ee84d444ee4332a7f74027e8a675191593"
+styled-components@3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.1.4.tgz#1bdc1409c9bacafee3510c573d23b73039b0d875"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
@@ -6660,7 +6667,12 @@ styled-components@3.0.2:
     is-plain-object "^2.0.1"
     prop-types "^15.5.4"
     stylis "^3.4.0"
+    stylis-rule-sheet "^0.0.7"
     supports-color "^3.2.3"
+
+stylis-rule-sheet@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.7.tgz#5c51dc879141a61821c2094ba91d2cbcf2469c6c"
 
 stylis@^3.4.0:
   version "3.4.8"
