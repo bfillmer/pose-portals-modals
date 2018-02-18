@@ -30,6 +30,6 @@ injectGlobal`
   }
 `
 
-// Simple helper function, takes in any number of props mapping to properties within the theme
-// object and returns the value.
-export const getTheme = (...props) => ({theme}) => props.reduce((t, p) => t[p], theme)
+// Simple helper function, takes in any number of arguments and maps to nested properties within the
+// theme object and returns the value.
+export const getTheme = (...args) => ({theme}) => args.reduce((t, p) => t[p], theme)

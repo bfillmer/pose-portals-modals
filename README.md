@@ -8,11 +8,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Commands
 
 ```bash
-yarn start # development server
-yarn build # production build
-yarn test # Jest in watch-mode
-yarn coverage # Jest coverage report
-yarn lint # fix basic linting errors
+npm i # install dependencies
+npm start # development server
+npm test # Jest in watch-mode
+npm run coverage # Jest coverage report
+npm run lint # fix basic linting errors
+npm run build # production build
+npm run clean # clears node_modules
 ```
 
 ## Overview
@@ -23,5 +25,4 @@ yarn lint # fix basic linting errors
 * `curi` routing (https://curi.js.org/)
 * `redux-saga` side-effects (https://redux-saga.js.org/)
 * `redux-actions` simplify actions boilerplate (https://github.com/acdlite/redux-actions)
-* `redux-data-structures` simplify reducer boilerplate (https://redux-data-structures.js.org/)
 * `axios` just-works http client (https://github.com/axios/axios)
