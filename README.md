@@ -26,3 +26,4 @@ npm run clean # clears node_modules
 * `redux-saga` side-effects (https://redux-saga.js.org/)
 * `redux-actions` simplify actions boilerplate (https://github.com/acdlite/redux-actions)
 * `axios` just-works http client (https://github.com/axios/axios)
+* `redux-data-structures` reducer creators for most use cases (https://redux-data-structures.js.org/)
