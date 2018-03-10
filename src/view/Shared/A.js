@@ -1,5 +1,6 @@
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import {history} from 'router'
@@ -12,9 +13,15 @@ const makeLinkAction = href => e => {
 
 // Usage of the external prop allows for standard a tag behavior. This allows for usage of Link
 // component for all linking needs, keeping consistent styling.
-const A = ({children, external, href, ...additionalProps}) => external
+const Link = ({children, external, href, ...additionalProps}) => external
   ? (<a href={href} {...additionalProps}>{children}</a>)
   : (<a href={href} onClick={makeLinkAction(href)} {...additionalProps}>{children}</a>)
 
 // Export as a styled component for ease of use with the .extend method.
-export const Link = styled(A)``
+export const A = styled(Link)``
+
+A.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  external: PropTypes.bool
+}
