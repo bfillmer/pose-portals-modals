@@ -1,29 +1,19 @@
 
 import React from 'react'
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
-import logo from 'assets/logo.svg'
+import {Logo} from 'view/Shared/Logo'
 
-// HEADER COMPONENTS
-const logoSpin = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-`
+function ComposeHeader ({className}) {
+  return (
+    <header className={className}>
+      <Logo />
+    </header>
+  )
+}
 
-const Logo = styled.img`
-  animation: ${logoSpin} infinite 20s linear;
-  height: 80px;
-`
-
-const Wrapper = styled.header`
+export const Header = styled(ComposeHeader)`
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
 `
-
-// HEADER COMPOSITION
-export const Header = ({name}) => (
-  <Wrapper>
-    <Logo src={logo} alt='logo' />
-  </Wrapper>
-)

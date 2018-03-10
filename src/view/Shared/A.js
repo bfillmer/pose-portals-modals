@@ -3,6 +3,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import {getTheme} from 'view/theme'
+
 import {history} from 'router'
 
 // Wrap hickory's navigate function for our Link component.
@@ -18,7 +20,12 @@ const Link = ({children, external, href, ...additionalProps}) => external
   : (<a href={href} onClick={makeLinkAction(href)} {...additionalProps}>{children}</a>)
 
 // Export as a styled component for ease of use with the .extend method.
-export const A = styled(Link)``
+export const A = styled(Link)`
+  color: ${getTheme('primary', 'base')};
+  &:hover {
+    color: ${getTheme('primary', 'dark')};
+  }
+`
 
 A.propTypes = {
   href: PropTypes.string.isRequired,

@@ -2,6 +2,7 @@
 import {LOCATION_CHANGE} from '@curi/redux'
 import {cancel, fork, take, takeEvery} from 'redux-saga/effects'
 
+import {autoRestart} from 'state/sagas/utils'
 import {ROUTE_HOME} from 'types'
 
 // Route Sagas
@@ -23,6 +24,8 @@ function * handleLocationChange ({response}) {
 }
 
 // Watch for all actions dispatched that have an action type in our saga routesMap.
-export function * routes () {
+function * init () {
   yield takeEvery(LOCATION_CHANGE, handleLocationChange)
 }
+
+export const routes = autoRestart(init)

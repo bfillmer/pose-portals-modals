@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 
 // GLOBAL WRAPPER
-export const Wrapper = styled.main`
+export const Application = styled.main`
   height: 100vh;
 `
 

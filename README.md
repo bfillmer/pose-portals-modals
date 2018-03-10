@@ -22,6 +22,7 @@ npm run clean # clears node_modules
 * Commands include `NODE_PATH` to leverage absolute pathing to `src/` for cleaner imports.
 * `standardjs` linting (https://standardjs.com/)
 * `styled-components` css-in-js (https://www.styled-components.com)
+* `styled-system` useful utility belt for styled-components (http://jxnblk.com/styled-system/)
 * `curi` routing (https://curi.js.org/)
 * `redux-saga` side-effects (https://redux-saga.js.org/)
 * `redux-actions` simplify actions boilerplate (https://github.com/acdlite/redux-actions)

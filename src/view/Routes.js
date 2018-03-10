@@ -17,11 +17,9 @@ const mapStateToProps = state => ({
   route: routeType(state)
 })
 
-const Container = ({route}) => {
+function Container ({route}) {
   const Route = routesMap[route] ? routesMap[route] : routesMap[ROUTE_HOME]
-  return (
-    <Route />
-  )
+  return (<Route />)
 }
 
 export const Routes = connect(mapStateToProps)(Container)
