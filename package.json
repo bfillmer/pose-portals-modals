@@ -1,13 +1,14 @@
 {
   "name": "greenfield",
-  "version": "1.9.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
-    "start": "NODE_PATH=src/ react-scripts start",
+    "start": "react-scripts start",
     "now-start": "serve -s ./build",
-    "build": "NODE_PATH=src/ react-scripts build",
-    "test": "NODE_PATH=src/ react-scripts test --env=jsdom",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "coverage": "yarn test -- --coverage",
+    "analyze": "source-map-explorer build/static/js/main.*",
     "lint": "standard --fix",
     "clean": "rm -rf node_modules"
   },
@@ -30,6 +31,7 @@
     "react-scripts": "^1.1.1",
     "redux-devtools-extension": "^2.13.2",
     "serve": "^6.5.2",
+    "source-map-explorer": "^1.5.0",
     "standard": "^11.0.0"
   },
   "jest": {
