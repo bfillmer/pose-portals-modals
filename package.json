@@ -1,19 +1,19 @@
 {
   "name": "greenfield",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
     "now-start": "serve -s ./build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "coverage": "yarn test -- --coverage",
+    "coverage": "npm test -- --coverage",
     "analyze": "source-map-explorer build/static/js/main.*",
     "lint": "standard --fix",
     "clean": "rm -rf node_modules"
   },
   "dependencies": {
-    "@curi/core": "^1.0.0-beta.26",
+    "@curi/core": "^1.0.0-beta.27",
     "@curi/redux": "^1.0.0-beta.2",
     "@hickory/browser": "^1.0.0-beta.5",
     "axios": "^0.18.0",
@@ -24,15 +24,15 @@
     "redux-actions": "^2.3.0",
     "redux-data-structures": "^0.1.6",
     "redux-saga": "^0.16.0",
-    "styled-components": "^3.2.1",
+    "styled-components": "^3.2.3",
     "styled-system": "^2.2.1"
   },
   "devDependencies": {
     "react-scripts": "^1.1.1",
     "redux-devtools-extension": "^2.13.2",
-    "serve": "^6.5.2",
+    "serve": "^6.5.3",
     "source-map-explorer": "^1.5.0",
-    "standard": "^11.0.0"
+    "standard": "^11.0.1"
   },
   "jest": {
     "collectCoverageFrom": [
