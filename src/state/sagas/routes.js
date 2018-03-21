@@ -1,8 +1,8 @@
 
 import {LOCATION_CHANGE} from '@curi/redux'
-import {cancel, fork, take, takeEvery} from 'redux-saga/effects'
+import {cancel, take, takeEvery} from 'redux-saga/effects'
 
-import {autoRestart} from 'state/sagas/utils'
+import {autoRestart, spork} from 'state/sagas/utils'
 import {ROUTE_HOME} from 'types'
 
 // Route Sagas
@@ -17,7 +17,7 @@ const routesMap = {
 // and cancel the previously running saga.
 function * handleLocationChange ({response}) {
   if (response.name && routesMap[response.name]) {
-    const routeSaga = yield fork(routesMap[response.name])
+    const routeSaga = yield spork(routesMap[response.name])
     yield take(LOCATION_CHANGE)
     yield cancel(routeSaga)
   }
