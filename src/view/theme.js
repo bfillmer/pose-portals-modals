@@ -1,5 +1,5 @@
 
-import {injectGlobal} from 'styled-components'
+import {css, injectGlobal} from 'styled-components'
 
 const gray = {
   50: '#fafafa',
@@ -54,6 +54,22 @@ injectGlobal`
   }
 `
 
-// Simple helper function, takes in any number of arguments and maps to nested properties within the
-// theme object and returns the value.
-export const getTheme = (...args) => ({theme}) => args.reduce((t, p) => t[p], theme)
+// Media Queries & Breakpoints
+// Usage: ${media.desktop`display: block;`}
+const breakpoints = {
+  tabletPortrait: 600,
+  tabletLandscape: 900,
+  desktop: 1200,
+  desktopLarge: 1800
+}
+
+// Iterate through the sizes and create a media template
+export const media = Object.keys(breakpoints).reduce((acc, label) => {
+  return Object.assign({}, acc, {
+    [label]: (...args) => css`
+      @media (max-width: ${breakpoints[label] / 16}em) {
+        ${css(...args)}
+      }
+    `
+  })
+}, {})

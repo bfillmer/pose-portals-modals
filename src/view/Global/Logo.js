@@ -1,8 +1,7 @@
 
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
-
-import {getTheme} from 'view/theme'
+import {theme} from 'styled-system'
 
 function Svg ({className}) {
   return (
@@ -25,6 +24,6 @@ export const Logo = styled(Svg)`
   height: 80px;
   animation: ${logoSpin} infinite 20s linear;
   g {
-    fill: ${getTheme('primary', 'base')};
+    fill: ${theme('primary.base')};
   }
 `

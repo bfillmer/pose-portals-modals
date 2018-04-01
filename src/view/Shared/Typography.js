@@ -1,14 +1,19 @@
 
 import styled from 'styled-components'
+import {theme} from 'styled-system'
 
-import {getTheme} from 'view/theme'
+import {Text} from 'view/Shared/Primitives'
 
-export const H1 = styled.h1`
-  color: ${getTheme('gray', '800')};
-  margin-bottom: ${getTheme('space', 'base')};
+export const Heading = styled(Text).attrs({
+  is: 'h1'
+})`
+  color: ${theme('gray.800')};
+  margin-bottom: ${theme('space.base')};
 `
 
-export const P = styled.p`
-  color: ${getTheme('gray', '800')};
-  margin-bottom: ${getTheme('space', 'base')};
+export const P = styled(Text).attrs({
+  is: 'p'
+})`
+  color: ${theme('gray.800')};
+  margin-bottom: ${theme('space.base')};
 `

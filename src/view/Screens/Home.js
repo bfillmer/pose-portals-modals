@@ -2,13 +2,13 @@
 import React from 'react'
 
 import {Section} from 'view/Shared/Structural'
-import {H1, P} from 'view/Shared/Typography'
+import {Heading, P} from 'view/Shared/Typography'
 import {A} from 'view/Shared/A'
 
 export function Home () {
   return (
     <Section>
-      <H1>Home</H1>
+      <Heading>Home</Heading>
       <P><A href='/about'>About</A></P>
     </Section>
   )

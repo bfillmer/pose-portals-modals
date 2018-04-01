@@ -8,7 +8,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "coverage": "npm test -- --coverage",
-    "analyze": "source-map-explorer build/static/js/main.*",
+    "analyze": "npm run build && source-map-explorer build/static/js/main.*",
     "lint": "standard --fix",
     "clean": "rm -rf node_modules"
   },
@@ -17,6 +17,7 @@
     "@curi/redux": "^1.0.0-beta.2",
     "@hickory/browser": "^1.0.0-beta.5",
     "axios": "^0.18.0",
+    "clean-tag": "^1.0.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",

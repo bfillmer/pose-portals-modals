@@ -2,8 +2,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import {theme} from 'styled-system'
 
-import {getTheme} from 'view/theme'
+import {Text} from 'view/Shared/Primitives'
 
 import {history} from 'router'
 
@@ -15,15 +16,15 @@ const makeLinkAction = href => e => {
 
 // Usage of the external prop allows for standard a tag behavior. This allows for usage of Link
 // component for all linking needs, keeping consistent styling.
-const Link = ({children, external, href, ...additionalProps}) => external
-  ? (<a href={href} {...additionalProps}>{children}</a>)
-  : (<a href={href} onClick={makeLinkAction(href)} {...additionalProps}>{children}</a>)
+const Link = ({children, external, href, ...props}) => external
+  ? (<Text is='a' href={href} {...props}>{children}</Text>)
+  : (<Text is='a' href={href} onClick={makeLinkAction(href)} {...props}>{children}</Text>)
 
 // Export as a styled component for ease of use with the .extend method.
 export const A = styled(Link)`
-  color: ${getTheme('primary', 'base')};
+  color: ${theme('primary.base')};
   &:hover {
-    color: ${getTheme('primary', 'dark')};
+    color: ${theme('primary.dark')};
   }
 `
 
