@@ -3,7 +3,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import {routeType} from 'selectors'
-import {ROUTE_HOME, ROUTE_ABOUT} from 'types'
+import {ROUTE_HOME, ROUTE_ABOUT} from 'router'
 
 import {Home} from 'view/Screens/Home'
 import {About} from 'view/Screens/About'

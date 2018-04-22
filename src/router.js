@@ -2,7 +2,9 @@
 import Browser from '@hickory/browser'
 import curi from '@curi/core'
 
-import {ROUTE_HOME, ROUTE_ABOUT} from 'types'
+// ROUTE IDENTIFIERS
+export const ROUTE_HOME = 'route/HOME'
+export const ROUTE_ABOUT = 'route/ABOUT'
 
 export const history = Browser()
 

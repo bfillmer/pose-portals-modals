@@ -3,7 +3,7 @@ import {LOCATION_CHANGE} from '@curi/redux'
 import {cancel, take, takeEvery} from 'redux-saga/effects'
 
 import {autoRestart, spork} from 'state/sagas/utils'
-import {ROUTE_HOME} from 'types'
+import {ROUTE_HOME} from 'router'
 
 // Route Sagas
 import {init as initHome} from 'state/sagas/home'
