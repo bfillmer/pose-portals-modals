@@ -5,43 +5,36 @@ import styled from 'styled-components'
 
 import {history, router} from 'router'
 
+// Get pathname that maps to the route identifier.
+const getPathname = router.route.pathname
+
 // Wrap hickory's navigate function for our Link component.
 const makeLinkAction = pathname => e => {
   e.preventDefault()
   history.navigate(pathname)
 }
 
-// Encapsulate shared functionality between the link and button variants.
-function makeProps ({external, href, ...props}) {
-  if (external) {
-    return {
-      href,
-      ...props
-    }
-  }
-
-  const pathname = router.route.pathname(href)
-  return {
-    href: pathname,
-    onClick: makeLinkAction(pathname),
-    ...props
-  }
+function InternalLink ({href, children, ...props}) {
+  const pathname = getPathname(href)
+  return (<a href={pathname} onClick={makeLinkAction(pathname)} {...props}>{children}</a>)
 }
 
-// Usage of the external prop allows for standard a tag behavior. This allows for usage of Link
-// component for all linking needs, keeping consistent styling.
-function AVariant ({children, ...props}) {
-  return (<a {...makeProps(props)}>{children}</a>)
+function ExternalLink ({children, ...props}) {
+  return (<a {...props}>{children}</a>)
 }
 
-function ButtonVariant ({children, ...props}) {
-  return (<button {...makeProps(props)}>{children}</button>)
+function InternalButton ({href, children, ...props}) {
+  const pathname = getPathname(href)
+  return (<button onClick={makeLinkAction(pathname)} {...props}>{children}</button>)
 }
 
-// Export as styled components.
-export const A = styled(AVariant)``
+function Link ({external, ...props}) {
+  return external ? <ExternalLink {...props} /> : <InternalLink {...props} />
+}
 
-export const Button = styled(ButtonVariant)``
+export const A = styled(Link)``
+
+export const Button = styled(InternalButton)``
 
 A.propTypes = {
   href: PropTypes.string.isRequired,
