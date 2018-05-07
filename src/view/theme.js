@@ -26,12 +26,12 @@ const secondary = {
   dark: '#c41c00'
 }
 
-const space = {
-  quarter: '0.25rem',
-  half: '0.5rem',
-  base: '1rem',
-  double: '2rem'
-}
+const space = {}
+
+// Simple Lens to allow easy access to nested theme values.
+const get = (obj, path, fallback) => path.split('.')
+  .reduce((a, b) => (a && a[b]) ? a[b] : null, obj) || fallback
+export const themeValue = (keys, fallback) => props => get(props.theme, keys, fallback)
 
 // Reusable definitions for colors, spacings, etc.
 export const theme = {
