@@ -3,14 +3,12 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import {routeType} from 'selectors'
-import {ROUTE_HOME, ROUTE_ABOUT} from 'router'
+import {ROUTE_HOME} from 'router'
 
 import {Home} from 'view/Screens/Home'
-import {About} from 'view/Screens/About'
 
 const routesMap = {
-  [ROUTE_HOME]: Home,
-  [ROUTE_ABOUT]: About
+  [ROUTE_HOME]: Home
 }
 
 const mapStateToProps = state => ({
