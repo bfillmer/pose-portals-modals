@@ -1,6 +1,5 @@
 
-// import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import posed from 'react-pose'
 import tween from 'popmotion/animations/tween'
 
@@ -12,6 +11,8 @@ const BaseBackdrop = styled.div`
   right: 0;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.7);
+
+  ${props => props.mount ? css`display: block;` : css`display: none;`}
 `
 
 const BaseContainer = styled.div`

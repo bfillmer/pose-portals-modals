@@ -12,13 +12,24 @@ export class ModalState extends React.Component {
 
     this.toggle = () => {
       this.setState({
+        mount: !this.state.show ? true : this.state.mount,
         show: !this.state.show
       })
     }
 
+    this.unmount = () => {
+      if (!this.state.show) {
+        this.setState({
+          mount: false
+        })
+      }
+    }
+
     this.state = {
+      mount: false,
       show: false,
-      toggle: this.toggle
+      toggle: this.toggle,
+      unmount: this.unmount
     }
   }
 

@@ -7,13 +7,17 @@ import {ModalContext, ModalState} from './Context'
 
 const makeToggleClick = toggle => e => (e.currentTarget === e.target) && toggle()
 
-// @TODO Probably need posegroup to mount/unmount within overlay.
 function Content ({children}) {
   return (
     <ModalContext.Consumer>
-      {({show, toggle}) =>
+      {({mount, show, toggle, unmount}) =>
         <Overlay>
-          <Backdrop onClick={makeToggleClick(toggle)} pose={show ? 'enter' : 'exit'}>
+          <Backdrop
+            onClick={makeToggleClick(toggle)}
+            pose={show ? 'enter' : 'exit'}
+            onPoseComplete={unmount}
+            mount={mount}
+          >
             <Container pose={show ? 'enter' : 'exit'}>
               {children}
             </Container>
