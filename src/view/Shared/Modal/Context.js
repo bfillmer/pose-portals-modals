@@ -2,8 +2,10 @@
 import React from 'react'
 
 export const ModalContext = React.createContext({
+  shouldMount: false,
   show: false,
-  toggle: () => null
+  toggle: () => null,
+  unmout: () => null
 })
 
 export class ModalState extends React.Component {
@@ -11,8 +13,14 @@ export class ModalState extends React.Component {
     super(props)
 
     this.toggle = () => {
+      // Mount our modal into the dom, then trigger our enter animation.
       this.setState({
-        mount: !this.state.show ? true : this.state.mount,
+        shouldMount: !this.state.show ? true : this.state.shouldMount
+      }, this.show)
+    }
+
+    this.show = () => {
+      this.setState({
         show: !this.state.show
       })
     }
@@ -20,13 +28,13 @@ export class ModalState extends React.Component {
     this.unmount = () => {
       if (!this.state.show) {
         this.setState({
-          mount: false
+          shouldMount: false
         })
       }
     }
 
     this.state = {
-      mount: false,
+      shouldMount: false,
       show: false,
       toggle: this.toggle,
       unmount: this.unmount

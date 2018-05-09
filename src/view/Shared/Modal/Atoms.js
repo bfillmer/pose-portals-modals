@@ -1,7 +1,7 @@
 
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import posed from 'react-pose'
-import tween from 'popmotion/animations/tween'
+import spring from 'popmotion/animations/spring'
 
 const BaseBackdrop = styled.div`
   position: fixed;
@@ -11,8 +11,6 @@ const BaseBackdrop = styled.div`
   right: 0;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.7);
-
-  ${props => props.mount ? css`display: block;` : css`display: none;`}
 `
 
 const BaseContainer = styled.div`
@@ -34,9 +32,10 @@ export const Backdrop = posed(BaseBackdrop)({
 
 export const Container = posed(BaseContainer)({
   enter: {
+    delay: 250,
     x: '-50%',
     y: '-50%',
-    transition: (props) => tween({ ...props, duration: 1000 })
+    transition: (props) => spring({duration: 1000, ...props})
   },
   exit: {
     x: '-50%',

@@ -10,13 +10,12 @@ const makeToggleClick = toggle => e => (e.currentTarget === e.target) && toggle(
 function Content ({children}) {
   return (
     <ModalContext.Consumer>
-      {({mount, show, toggle, unmount}) =>
+      {({shouldMount, show, toggle, unmount}) => shouldMount &&
         <Overlay>
           <Backdrop
             onClick={makeToggleClick(toggle)}
             pose={show ? 'enter' : 'exit'}
             onPoseComplete={unmount}
-            mount={mount}
           >
             <Container pose={show ? 'enter' : 'exit'}>
               {children}
